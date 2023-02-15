@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { PipesComponent } from './modules/demo/pipes/pipes.component';
 import { TempPipe } from './shared/pipes/temp.pipe';
 import { ChronometreComponent } from './modules/exercice/chronometre/chronometre.component';
+import { TimePipe } from './modules/exercice/chronometre/time/time.pipe';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ChronometreComponent } from './modules/exercice/chronometre/chronometre
     BindingsComponent,
     PipesComponent,
     TempPipe,
-    ChronometreComponent
+    ChronometreComponent,
+    TimePipe
   ],
   imports: [
     BrowserModule,
