@@ -12,6 +12,10 @@ import { PipesComponent } from './modules/demo/pipes/pipes.component';
 import { TempPipe } from './shared/pipes/temp.pipe';
 import { ChronometreComponent } from './modules/exercice/chronometre/chronometre.component';
 import { TimePipe } from './modules/exercice/chronometre/time/time.pipe';
+import { ComponentDirectiveComponent } from './modules/demo/component-directive/component-directive.component';
+import { StructuralDirectiveComponent } from './modules/demo/structural-directive/structural-directive.component';
+import { HoverColorDirective } from './modules/demo/custom-directive/hover-color.directive';
+import { CustomDirectiveComponent } from './modules/demo/custom-directive/custom-directive.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,11 @@ import { TimePipe } from './modules/exercice/chronometre/time/time.pipe';
     PipesComponent,
     TempPipe,
     ChronometreComponent,
-    TimePipe
+    TimePipe,
+    ComponentDirectiveComponent,
+    StructuralDirectiveComponent,
+    HoverColorDirective,
+    CustomDirectiveComponent
   ],
   imports: [
     BrowserModule,
