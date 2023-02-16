@@ -23,9 +23,22 @@ export class StructuralDirectiveComponent {
     this.display = !this.display
   }
 
+  functest(nom : string, age1 : number){
+    let use : user = new userClass(nom, age1)
+  }
 }
 
 export interface user{
-  name : string,
+  name : string;
+  age : number;
+}
+
+export class userClass{
+
+  constructor(_name : string, _age : number){
+    this.name = _name;
+    this.age = _age
+  }
+  name : string
   age : number
 }

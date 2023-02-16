@@ -16,6 +16,7 @@ import { ComponentDirectiveComponent } from './modules/demo/component-directive/
 import { StructuralDirectiveComponent } from './modules/demo/structural-directive/structural-directive.component';
 import { HoverColorDirective } from './modules/demo/custom-directive/hover-color.directive';
 import { CustomDirectiveComponent } from './modules/demo/custom-directive/custom-directive.component';
+import { ListUserComponent } from './modules/exercice/list-user/list-user.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { CustomDirectiveComponent } from './modules/demo/custom-directive/custom
     ComponentDirectiveComponent,
     StructuralDirectiveComponent,
     HoverColorDirective,
-    CustomDirectiveComponent
+    CustomDirectiveComponent,
+    ListUserComponent
   ],
   imports: [
     BrowserModule,

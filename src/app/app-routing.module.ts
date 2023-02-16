@@ -7,6 +7,7 @@ import { MainDemoComponent } from './modules/demo/main-demo/main-demo.component'
 import { PipesComponent } from './modules/demo/pipes/pipes.component';
 import { StructuralDirectiveComponent } from './modules/demo/structural-directive/structural-directive.component';
 import { ChronometreComponent } from './modules/exercice/chronometre/chronometre.component';
+import { ListUserComponent } from './modules/exercice/list-user/list-user.component';
 import { MainExerciceComponent } from './modules/exercice/main-exercice/main-exercice.component';
 
 const routes: Routes = [
@@ -18,7 +19,8 @@ const routes: Routes = [
     {path : 'custom-directive', component : CustomDirectiveComponent}
   ]},
   {path : 'exercice', component : MainExerciceComponent, children : [
-    {path : 'chronometre', component : ChronometreComponent}
+    {path : 'chronometre', component : ChronometreComponent},
+    {path : 'list-user', component : ListUserComponent}
   ]}
 ];
 
