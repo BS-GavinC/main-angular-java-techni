@@ -1,0 +1,16 @@
+<fieldset>
+  <legend>Items</legend>
+  <table>
+    <tr>
+      <th>Nom</th>
+      <th>Quantité</th>
+    </tr>
+    <tr *ngFor="let item of items">
+      <td>{{item.name}}</td>
+      <td>{{item.quantity}}</td>
+      <td>
+        <button (click)="emitIndex(items.indexOf(item))">-1</button>
+      </td>
+    </tr>
+  </table>
+</fieldset>

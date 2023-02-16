@@ -17,6 +17,10 @@ import { StructuralDirectiveComponent } from './modules/demo/structural-directiv
 import { HoverColorDirective } from './modules/demo/custom-directive/hover-color.directive';
 import { CustomDirectiveComponent } from './modules/demo/custom-directive/custom-directive.component';
 import { ListUserComponent } from './modules/exercice/list-user/list-user.component';
+import { InputOutputComponent } from './modules/demo/input-output/input-output.component';
+import { EnfantComponent } from './modules/demo/input-output/enfant/enfant.component';
+import { ListeCourseComponent } from './modules/exercice/liste-course/liste-course.component';
+import { TableauComponent } from './modules/exercice/liste-course/tableau/tableau.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +37,11 @@ import { ListUserComponent } from './modules/exercice/list-user/list-user.compon
     StructuralDirectiveComponent,
     HoverColorDirective,
     CustomDirectiveComponent,
-    ListUserComponent
+    ListUserComponent,
+    InputOutputComponent,
+    EnfantComponent,
+    ListeCourseComponent,
+    TableauComponent
   ],
   imports: [
     BrowserModule,
