@@ -1,5 +1,7 @@
+import { DOCUMENT } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { item } from '../liste-course.component';
+import { item } from 'src/app/shared/models/item';
+import { ShopListService } from 'src/app/shared/services/shop-list/shop-list.service';
 
 @Component({
   selector: 'app-tableau',
@@ -8,14 +10,19 @@ import { item } from '../liste-course.component';
 })
 export class TableauComponent {
 
-  @Output()
-  deleteEmitter : EventEmitter<number> = new EventEmitter<number>
+  constructor(private _shopListService : ShopListService){}
 
-  @Input()
-  items : item[] = []
-
-  emitIndex(index : number){
-    this.deleteEmitter.emit(index)
+  get items() : item[]{
+    return this._shopListService.items
   }
+
+  quantities : number[] = []
+
+  removeItem(index : number){
+
+    this._shopListService.removeItem(index, this.quantities[index])
+
+}
+
 
 }

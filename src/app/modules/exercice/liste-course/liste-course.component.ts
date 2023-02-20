@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { item } from 'src/app/shared/models/item';
+import { ShopListService } from 'src/app/shared/services/shop-list/shop-list.service';
 
 @Component({
   selector: 'app-liste-course',
@@ -7,7 +9,7 @@ import { Component } from '@angular/core';
 })
 export class ListeCourseComponent {
 
-  items : item[] = []
+  constructor(private _shopListService : ShopListService){}
 
   name : string = ''
 
@@ -15,33 +17,7 @@ export class ListeCourseComponent {
 
   addItem(){
 
-    let item = this.items.find(i => i.name == this.name)
-
-    if(item){
-
-      item.quantity+= this.quantity
-
-    }
-    else{
-      let newItem : item = {
-      name : this.name,
-      quantity : this.quantity
-      }
-
-    this.items.push(newItem)
-    }
-
-    console.log(this.items);
-
-  }
-
-  removeItem(index : number){
-
-    this.items[index].quantity--
-
-    if(this.items[index].quantity == 0){
-      this.items.splice(index, 1)
-    }
+    this._shopListService.addItem(this.name, this.quantity)
 
   }
 
@@ -49,7 +25,3 @@ export class ListeCourseComponent {
 
 }
 
-export interface item{
-  name : string,
-  quantity : number
-}

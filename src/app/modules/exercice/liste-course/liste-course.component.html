@@ -8,9 +8,7 @@
   <input type="number" [(ngModel)]="quantity"> &nbsp;
   <button (click)="addItem()" [disabled]="quantity == undefined || name == ''">Ok</button>
 
-  <app-tableau [items]="items"
-                (deleteEmitter)="removeItem($event)"
-  ></app-tableau>
+  <app-tableau></app-tableau>
 
 
 </fieldset>
