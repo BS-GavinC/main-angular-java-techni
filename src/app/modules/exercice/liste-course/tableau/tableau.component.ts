@@ -22,6 +22,8 @@ export class TableauComponent {
 
     this._shopListService.removeItem(index, this.quantities[index])
 
+    this.quantities = []
+
 }
 
 

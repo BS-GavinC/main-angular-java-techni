@@ -12,22 +12,29 @@ export class ShopListService {
 
   addItem(name : string, quantity : number){
 
-    let searchedItem = this.items.find(i => i.name === name)
+    if (quantity == 0) {
 
-    if (searchedItem) {
-      searchedItem.quantity += quantity;
     }
+    else {
+      let searchedItem = this.items.find(i => i.name === name)
 
-    else{
-
-      let newItem : item = {
-        name : name,
-        quantity : quantity
+      if (searchedItem) {
+        searchedItem.quantity += quantity;
       }
 
-      this.items.push(newItem)
+      else{
 
+        let newItem : item = {
+          name : name,
+          quantity : quantity
+        }
+
+        this.items.push(newItem)
+
+      }
     }
+
+
 
   }
 
