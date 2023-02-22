@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { BindingsComponent } from './modules/demo/bindings/bindings.component';
 import { ComponentDirectiveComponent } from './modules/demo/component-directive/component-directive.component';
 import { CustomDirectiveComponent } from './modules/demo/custom-directive/custom-directive.component';
+import { FormsComponent } from './modules/demo/forms/forms.component';
 import { FormulairesComponent } from './modules/demo/formulaires/formulaires.component';
 import { InputOutputComponent } from './modules/demo/input-output/input-output.component';
 import { MainDemoComponent } from './modules/demo/main-demo/main-demo.component';
@@ -23,7 +24,8 @@ const routes: Routes = [
     {path : 'custom-directive', component : CustomDirectiveComponent},
     {path : 'input-output', component : InputOutputComponent},
     {path : 'services', component : MainComponent},
-    {path : 'formulaires', component : FormulairesComponent}
+    {path : 'formulaires', component : FormulairesComponent},
+    {path : 'forms', component : FormsComponent}
   ]},
   {path : 'exercice', component : MainExerciceComponent, children : [
     {path : 'chronometre', component : ChronometreComponent},

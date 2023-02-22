@@ -25,6 +25,7 @@ import { MainComponent } from './modules/demo/services/main/main.component';
 import { Table1Component } from './modules/demo/services/table1/table1.component';
 import { Table2Component } from './modules/demo/services/table2/table2.component';
 import { FormulairesComponent } from './modules/demo/formulaires/formulaires.component';
+import { FormsComponent } from './modules/demo/forms/forms.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { FormulairesComponent } from './modules/demo/formulaires/formulaires.com
     MainComponent,
     Table1Component,
     Table2Component,
-    FormulairesComponent
+    FormulairesComponent,
+    FormsComponent
   ],
   imports: [
     BrowserModule,
