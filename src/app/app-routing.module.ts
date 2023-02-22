@@ -10,6 +10,9 @@ import { MainDemoComponent } from './modules/demo/main-demo/main-demo.component'
 import { PipesComponent } from './modules/demo/pipes/pipes.component';
 import { MainComponent } from './modules/demo/services/main/main.component';
 import { StructuralDirectiveComponent } from './modules/demo/structural-directive/structural-directive.component';
+import { AuthComponent } from './modules/exercice/auth/auth.component';
+import { LoginComponent } from './modules/exercice/auth/login/login.component';
+import { RegisterComponent } from './modules/exercice/auth/register/register.component';
 import { ChronometreComponent } from './modules/exercice/chronometre/chronometre.component';
 import { ListUserComponent } from './modules/exercice/list-user/list-user.component';
 import { ListeCourseComponent } from './modules/exercice/liste-course/liste-course.component';
@@ -30,7 +33,11 @@ const routes: Routes = [
   {path : 'exercice', component : MainExerciceComponent, children : [
     {path : 'chronometre', component : ChronometreComponent},
     {path : 'list-user', component : ListUserComponent},
-    {path : 'shopping-list', component : ListeCourseComponent}
+    {path : 'shopping-list', component : ListeCourseComponent},
+    {path : 'auth', component : AuthComponent, children : [
+      {path : 'register', component : RegisterComponent},
+      {path : 'login', component : LoginComponent}
+    ]}
   ]}
 ];
 
