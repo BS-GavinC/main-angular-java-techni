@@ -14,29 +14,23 @@ export class RegisterComponent {
 
   pattern : string = "^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
 
+
   registerForm : FormGroup = this._formBuilder.group({
     email : ['', [Validators.required, Validators.email]],
     pseudo : ['', [Validators.required]],
     password : ['', [Validators.required, Validators.pattern(this.pattern)]],
     confirmationPassword : ['', [Validators.required, Validators.pattern(this.pattern)]],
     cluf : [false, [Validators.requiredTrue]]
-  })
+  }, {validators : this.comparePassword()})
 
   constructor(private _authService : AuthService, private _formBuilder : FormBuilder){}
 
-
-  // comparePassword() : ValidatorFn {
-  //   return (control : AbstractControl) : ValidationErrors | null => {
-  //     let pw = control.get('password')
-
-  //     if(control.get('password') != undefined && control.get('confirmationPassword') != null){
-  //       return true ? null : {samePassword : false}
-  //     }
-
-  //     return true ? null : {samePassword : false}
-
-  //   }
-  // }
+// Un custom validator qui check que les passwords sont identiques.
+  comparePassword() : ValidatorFn {
+    return (control : AbstractControl) : ValidationErrors | null => {
+      return control.get('password')?.value == control.get('confirmationPassword')?.value ? null : {samePassword : false}
+      }
+    }
 
   register(){
 

@@ -37,7 +37,7 @@ export class AuthService {
 
     this.activeUser = newUser
 
-    setTimeout(() => {this._router.navigate(['/exercice/auth'])} , 1000)
+    this._router.navigate(['/exercice/auth'])
 
     return 'Enregistrement effectué.'
 
@@ -45,9 +45,17 @@ export class AuthService {
 
   login(email : string, password : string) : string {
 
-    this.activeUser = this.users.find(u => u.email == email && u.password == password)
+    this.activeUser = this.users.find(u => u.email.toUpperCase() == email.toUpperCase() && u.password == password)
 
-    return this.activeUser ? 'Utilisateur Connecté' : 'Email ou mot de passe incorrect'
+    if (this.activeUser) {
+
+      this._router.navigate(['/exercice/auth'])
+
+      return 'Utilisateur Connecté'
+
+    }
+
+    return 'Email ou mot de passe incorrect'
 
   }
 

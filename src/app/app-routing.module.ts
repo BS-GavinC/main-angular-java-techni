@@ -19,6 +19,7 @@ import { ListeCourseComponent } from './modules/exercice/liste-course/liste-cour
 import { MainExerciceComponent } from './modules/exercice/main-exercice/main-exercice.component';
 
 const routes: Routes = [
+
   {path : 'demo', component : MainDemoComponent, children : [
     {path : 'bindings', component : BindingsComponent},
     {path : 'pipes', component : PipesComponent},
@@ -38,7 +39,10 @@ const routes: Routes = [
       {path : 'register', component : RegisterComponent},
       {path : 'login', component : LoginComponent}
     ]}
-  ]}
+  ]},
+  {path : 'module', loadChildren : () => import('./modules/users/users.module').then(m => m.UsersModule)},
+
+
 ];
 
 @NgModule({
