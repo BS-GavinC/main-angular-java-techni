@@ -1,1 +1,12 @@
-<p>read-user works!</p>
+<br>
+
+<div *ngIf="viewedUser">
+  <p>Email : {{viewedUser.email}}</p>
+  <br>
+  <p>Nom : {{viewedUser.name}}</p>
+</div>
+
+<div *ngIf="!viewedUser">
+  <p>Information introuvable</p>
+</div>
+

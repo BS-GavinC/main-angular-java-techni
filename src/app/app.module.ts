@@ -29,6 +29,8 @@ import { FormsComponent } from './modules/demo/forms/forms.component';
 import { AuthComponent } from './modules/exercice/auth/auth.component';
 import { RegisterComponent } from './modules/exercice/auth/register/register.component';
 import { LoginComponent } from './modules/exercice/auth/login/login.component';
+import { UsersModule } from './modules/users/users.module';
+import { ReadUserComponent } from './modules/users/read-user/read-user.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +65,8 @@ import { LoginComponent } from './modules/exercice/auth/login/login.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    UsersModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -40,8 +40,7 @@ const routes: Routes = [
       {path : 'login', component : LoginComponent}
     ]}
   ]},
-  {path : 'module', loadChildren : () => import('./modules/users/users.module').then(m => m.UsersModule)},
-
+  {path : 'users', loadChildren : () => import('./modules/users/users.module').then(m => m.UsersModule)}
 
 ];
 
